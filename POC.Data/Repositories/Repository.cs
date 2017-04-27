@@ -34,6 +34,11 @@ namespace POC.Data.Repositories
             return Db.Select<T>();
         }
 
+        public void Add(T model)
+        {
+            Db.Insert<T>();
+           
+        }
         public void Dispose()
         {
             if (db != null)
